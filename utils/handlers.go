@@ -5,8 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-
-	_ "github.com/go-sql-driver/mysql"
 )
 
 var (
@@ -18,11 +16,6 @@ type App struct {
 }
 
 var (
-	Hostname      = "34.31.231.237"
-	Port          = "3306"
-	Username      = "divay"
-	Password      = "root"
-	Database      = "test"
 	queryReport1  = "SELECT * FROM RPTTBL01"
 	queryReport2  = "SELECT * FROM RPTTBL02"
 	queryReport3  = "SELECT * FROM RPTTBL03"

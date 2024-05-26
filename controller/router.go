@@ -9,6 +9,7 @@ import (
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/lib/pq"
 )
 
 var (
@@ -21,11 +22,14 @@ type App struct {
 }
 
 var (
-	Hostname = "34.31.231.237"
-	Port     = "3306"
+	//Hostname = "34.31.231.237"
+	Hostname = "34.126.208.89"
+	//Port     = "3306"
+	Port     = "5432"
 	Username = "divay"
 	Password = "root"
-	Database = "test"
+	//Database = "test"
+	Database = "ms432project"
 )
 
 func main() {
@@ -41,8 +45,9 @@ func main() {
 		WriteTimeout: 10 * time.Second,
 	}
 
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", Username, Password, Hostname, Port, Database)
-	db, err = sql.Open("mysql", dsn)
+	//dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", Username, Password, Hostname, Port, Database)
+	dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable", Hostname, Port, Username, Password, Database)
+	db, err = sql.Open("postgres", dsn)
 	if err != nil {
 		log.Fatalf("Could not connect to the database: %v", err)
 	}
