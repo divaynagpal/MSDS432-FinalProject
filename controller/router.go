@@ -23,13 +23,14 @@ type App struct {
 
 var (
 	//Hostname = "34.31.231.237"
-	Hostname = "34.126.208.89"
+	//Hostname = "34.126.208.89"
+	Hostname = "34.28.99.247"
 	//Port     = "3306"
 	Port     = "5432"
-	Username = "divay"
-	Password = "root"
+	Username = "postgres"
+	Password = "admin"
 	//Database = "test"
-	Database = "ms432project"
+	Database = "postgres"
 )
 
 func main() {

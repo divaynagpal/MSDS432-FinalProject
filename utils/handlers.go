@@ -16,15 +16,15 @@ type App struct {
 }
 
 var (
-	queryReport1  = "SELECT * FROM RPTTBL01"
-	queryReport2  = "SELECT * FROM RPTTBL02"
-	queryReport3  = "SELECT * FROM RPTTBL03"
-	queryReport4A = "SELECT * FROM RPTTBL04A"
-	queryReport4B = "SELECT * FROM RPTTBL04B"
-	queryReport4C = "SELECT * FROM RPTTBL04C"
-	queryReport5  = "SELECT * FROM RPTTBL05"
-	queryReport6  = "SELECT * FROM RPTTBL06"
-	queryReport7  = "SELECT * FROM RPTTBL07"
+	queryReport1  = `SELECT * FROM "SMZ.RPTTBL01"`
+	queryReport2  = `SELECT * FROM "SMZ.RPTTBL02"`
+	queryReport3  = `SELECT * FROM "SMZ.RPTTBL03"`
+	queryReport4A = `SELECT * FROM "SMZ.RPTTBL04A"`
+	queryReport4B = `SELECT * FROM "SMZ.RPTTBL04B"`
+	queryReport4C = `SELECT * FROM "SMZ.RPTTBL04C"`
+	queryReport5  = `SELECT * FROM "SMZ.RPTTBL05"`
+	queryReport6  = `SELECT * FROM "SMZ.RPTTBL06"`
+	queryReport7  = `SELECT * FROM "SMZ.RPTTBL07"`
 )
 
 func (app *App) GetReport1(w http.ResponseWriter, r *http.Request) {
@@ -221,8 +221,8 @@ func getDataFromTable(rows *sql.Rows, w http.ResponseWriter) ([]map[string]inter
 				v = val
 			}
 
-			fmt.Print("col", col)
-			fmt.Print("val", v)
+			//fmt.Print("col", col)
+			//fmt.Print("val", v)
 			row[col] = v
 		}
 		results = append(results, row)
