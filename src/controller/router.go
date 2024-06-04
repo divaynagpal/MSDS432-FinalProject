@@ -1,7 +1,7 @@
 package main
 
 import (
-	"MS432Project/utils"
+	"MS432Project/src/utils"
 	"database/sql"
 	"fmt"
 	"log"
