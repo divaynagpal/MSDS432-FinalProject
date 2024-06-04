@@ -3,9 +3,9 @@
 # Define database connection details
 DB_HOST="34.28.99.247"
 DB_PORT="5432"
-DB_NAME="ms432_project"
+DB_NAME="postgres"
 DB_USER="postgres"
-DB_PASSWORD="your_database_password"
+DB_PASSWORD="admin"
 
 # Directory containing CSV files
 CSV_DIR="/Users/supriyajadhav/Downloads"
